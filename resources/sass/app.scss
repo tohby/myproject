@@ -1,0 +1,29 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+$oswald: 'Oswald', sans-serif;
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #375079;
+  min-height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  border-bottom: #51576D;
+  z-index: 1;
+  font-weight: 900;
+}
+
+.btn-primary{
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover{
+  background-color: #2779BD;
+}
