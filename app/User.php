@@ -37,6 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getRouteKey()
+    {
+        return $this->slug;
+    }
+    
     public function profile()
     {
         return $this->hasOne('App\Profile');

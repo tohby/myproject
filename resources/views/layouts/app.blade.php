@@ -23,8 +23,8 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+            <div class="container p-0">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -75,26 +75,48 @@
         </nav>
         <main class="py-5">
             <div class="container p-0">
-                <div class="col-md-10">
-                    <div class="row">
-                        <button type="button" class="btn btn-primary btn-lg">NEW DISCUSSION</button>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav flex-column sidebar">
+                            @auth
+                            <li class="nav-item p-2">
+                                <a class="nav-link active" href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-question-circle mr-2"></i> 
+                                    </span>
+                                    My Questions
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-reply-all mr-2"></i>
+                                    </span> My Participation
+                                </a>
+                            </li>
+                            @endauth
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-times-circle mr-2"></i> 
+                                    </span>
+                                    Unsolved
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-check-circle mr-2"></i> 
+                                    </span>
+                                    Solved
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                </div>
-                <div class="row py-5">
-                    <div class="col-md-3">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
-                                aria-selected="true">Home</a>
-                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
-                                aria-selected="false">Profile</a>
-                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
-                                aria-selected="false">Messages</a>
-                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
-                                aria-selected="false">Settings</a>
+                    <div class="col-lg-9">
+                        <div class="container">
+                            @include('layouts/messages')
                         </div>
-                    </div>
-                    <div class="col-md-9">
                         @yield('content')
                     </div>
                 </div>
