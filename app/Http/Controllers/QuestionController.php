@@ -17,6 +17,8 @@ class QuestionController extends Controller
     public function index()
     {
         //
+        $questions = Question::orderBy('created_at', 'asc')->simplePaginate(12);
+        return view('home')->with('questions', $questions);
     }
 
     /**
@@ -64,7 +66,7 @@ class QuestionController extends Controller
     {
         //
         $question = Question::find($question);
-        return $question;
+        return view('questions/show', compact('question'));
     }
 
     /**

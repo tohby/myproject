@@ -10722,7 +10722,7 @@ a.text-dark:focus {
 .navbar-laravel {
   background-color: #ffffff;
   min-height: 70px;
-  border-bottom: 0.2px solid #A1A4B6;
+  border-bottom: 0.2px solid rgba(161, 164, 182, 0.514);
   z-index: 1;
   font-weight: 900;
 }

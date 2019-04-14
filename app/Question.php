@@ -19,8 +19,13 @@ class Question extends Model
         'title', 'user_id', 'question', 'best-reply', 'slug',
     ];
 
-    public function getRouteKey()
+    public function getRouteKeyName()
     {
-        return $this->slug;
+        return 'slug';
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

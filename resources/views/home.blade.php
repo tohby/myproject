@@ -30,17 +30,19 @@
         @endauth
 
         <div class="col-lg-12">
+            @foreach ($questions as $question)
+            <a href="{{$question->slug}}">
             <div class="card border-0">
                 <div class="media">
-                    <img src="/img-placeholder.png" class="mr-3 img-fluid" style="height:50px" alt="...">
-                    <div class="media-body">
-                        <h1 class="mt-0">Media heading</h1>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                        vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                        congue felis in faucibus.
+                    <img src="{{ Avatar::create($question->user->name)->setDimension(50, 50) }}" />
+                    <div class="media-body ml-2">
+                        <h1 class="mt-0">{{$question->title}}</h1>
+                        <p>{{$question->question}}</p>
                     </div>
                 </div>
             </div>
+            </a>
+            @endforeach
         </div>
     </div>
 </div>

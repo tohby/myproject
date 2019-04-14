@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container p-0">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'LawPost') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -77,7 +77,7 @@
             <div class="container p-0">
                 <div class="row">
                     <div class="col-lg-3">
-                        <ul class="nav flex-column sidebar">
+                        <ul class="nav flex-column sidebar sticky-top">
                             @auth
                             <li class="nav-item p-2">
                                 <a class="nav-link active" href="#">
