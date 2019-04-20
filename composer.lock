@@ -4,64 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bc37b1f458ebb332d216de3a3666570",
+    "content-hash": "9b0c67f2b06efcae13beafc16a6e1f6c",
     "packages": [
-        {
-            "name": "danielstjules/stringy",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/danielstjules/Stringy.git",
-                "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
-                "reference": "df24ab62d2d8213bbbe88cc36fc35a4503b4bd7e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "symfony/polyfill-mbstring": "~1.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Stringy\\": "src/"
-                },
-                "files": [
-                    "src/Create.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel St. Jules",
-                    "email": "danielst.jules@gmail.com",
-                    "homepage": "http://www.danielstjules.com"
-                }
-            ],
-            "description": "A string manipulation library with multibyte support",
-            "homepage": "https://github.com/danielstjules/Stringy",
-            "keywords": [
-                "UTF",
-                "helpers",
-                "manipulation",
-                "methods",
-                "multibyte",
-                "string",
-                "utf-8",
-                "utility",
-                "utils"
-            ],
-            "time": "2017-06-12T01:10:27+00:00"
-        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -654,16 +598,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.11",
+            "version": "v5.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a2cf7a7983329d63edc6fde43142b232bb61aa0a"
+                "reference": "6dd75b67811a265c57144ab15f25a8061ed4721f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a2cf7a7983329d63edc6fde43142b232bb61aa0a",
-                "reference": "a2cf7a7983329d63edc6fde43142b232bb61aa0a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6dd75b67811a265c57144ab15f25a8061ed4721f",
+                "reference": "6dd75b67811a265c57144ab15f25a8061ed4721f",
                 "shasum": ""
             },
             "require": {
@@ -797,7 +741,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-04-10T13:05:18+00:00"
+            "time": "2019-04-16T13:47:32+00:00"
         },
         {
             "name": "laravel/telescope",
@@ -925,47 +869,36 @@
             "time": "2018-10-12T19:39:35+00:00"
         },
         {
-            "name": "laravolt/avatar",
-            "version": "2.2.0",
+            "name": "lasserafn/php-initial-avatar-generator",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravolt/avatar.git",
-                "reference": "0bd373ca7f19600b9b78316dffafba9247cdfbc2"
+                "url": "https://github.com/LasseRafn/php-initial-avatar-generator.git",
+                "reference": "50406a7622a9a67ac0c78acfc4bd60ce51162d49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravolt/avatar/zipball/0bd373ca7f19600b9b78316dffafba9247cdfbc2",
-                "reference": "0bd373ca7f19600b9b78316dffafba9247cdfbc2",
+                "url": "https://api.github.com/repos/LasseRafn/php-initial-avatar-generator/zipball/50406a7622a9a67ac0c78acfc4bd60ce51162d49",
+                "reference": "50406a7622a9a67ac0c78acfc4bd60ce51162d49",
                 "shasum": ""
             },
             "require": {
-                "danielstjules/stringy": "~3.1",
-                "illuminate/cache": "~5.2",
-                "illuminate/support": "~5.2",
-                "intervention/image": "^2.1",
-                "php": ">=7.0"
+                "ext-json": "*",
+                "intervention/image": "^2.3",
+                "lasserafn/php-initials": "^2.20",
+                "lasserafn/php-string-script-language": "^0.1.0",
+                "overtrue/pinyin": "^4.0",
+                "php": "^7.0|^7.1|^7.2|^7.3|^7.4"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.1",
-                "phpunit/phpunit": "~6.0"
+                "doctrine/instantiator": "1.0.*",
+                "phpunit/phpunit": "^6.5",
+                "satooshi/php-coveralls": "^1.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravolt\\Avatar\\ServiceProvider"
-                    ],
-                    "aliases": {
-                        "Avatar": "Laravolt\\Avatar\\Facade"
-                    }
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Laravolt\\Avatar\\": "src"
+                    "LasseRafn\\InitialAvatarGenerator\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -974,21 +907,109 @@
             ],
             "authors": [
                 {
-                    "name": "Bayu Hendra Winata",
-                    "email": "uyab.exe@gmail.com",
-                    "homepage": "http://id-laravel.com",
-                    "role": "Developer"
+                    "name": "Lasse Rafn",
+                    "email": "lasserafn@gmail.com"
                 }
             ],
-            "description": "Turn name, email, and any other string into initial-based avatar or gravatar.",
-            "homepage": "https://github.com/laravolt/avatar",
+            "description": "A package to generate avatars with initials for PHP",
             "keywords": [
+                "Initials",
                 "avatar",
-                "gravatar",
-                "laravel",
-                "laravolt"
+                "image"
             ],
-            "time": "2019-02-14T01:09:22+00:00"
+            "time": "2019-02-26T18:53:06+00:00"
+        },
+        {
+            "name": "lasserafn/php-initials",
+            "version": "v2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LasseRafn/php-initials.git",
+                "reference": "ba4669e77552986998a9d1b34515a4e0c0f7acd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LasseRafn/php-initials/zipball/ba4669e77552986998a9d1b34515a4e0c0f7acd2",
+                "reference": "ba4669e77552986998a9d1b34515a4e0c0f7acd2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LasseRafn\\Initials\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lasse Rafn",
+                    "email": "lasserafn@gmail.com"
+                }
+            ],
+            "description": "A package to generate initials in PHP",
+            "keywords": [
+                "Initials",
+                "php"
+            ],
+            "time": "2017-10-13T08:59:38+00:00"
+        },
+        {
+            "name": "lasserafn/php-string-script-language",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LasseRafn/php-string-script-language.git",
+                "reference": "afde8404f211af21f7ec8b453eb84ce70bbd3692"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LasseRafn/php-string-script-language/zipball/afde8404f211af21f7ec8b453eb84ce70bbd3692",
+                "reference": "afde8404f211af21f7ec8b453eb84ce70bbd3692",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^7.1"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "1.0.5",
+                "phpunit/phpunit": "^5.6",
+                "phpunit/phpunit-mock-objects": "3.2.4",
+                "satooshi/php-coveralls": "^1.0",
+                "sebastian/exporter": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LasseRafn\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lasse Rafn",
+                    "email": "lasserafn@gmail.com"
+                }
+            ],
+            "description": "Detect language/encoding of a string in PHP",
+            "keywords": [
+                "language",
+                "php",
+                "string"
+            ],
+            "time": "2017-10-02T18:34:33+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1203,16 +1224,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.16.3",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "373d9f0d58651af366435148c39beb702c2b7ef4"
+                "reference": "9b49d637ad009e5e211142bc7492adcb19dbd645"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/373d9f0d58651af366435148c39beb702c2b7ef4",
-                "reference": "373d9f0d58651af366435148c39beb702c2b7ef4",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/9b49d637ad009e5e211142bc7492adcb19dbd645",
+                "reference": "9b49d637ad009e5e211142bc7492adcb19dbd645",
                 "shasum": ""
             },
             "require": {
@@ -1222,9 +1243,9 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
-                "kylekatarnls/multi-tester": "^0.1",
+                "kylekatarnls/multi-tester": "^1.1",
                 "phpmd/phpmd": "^2.6",
-                "phpstan/phpstan": "^0.10.8",
+                "phpstan/phpstan": "^0.11",
                 "phpunit/phpunit": "^7.5 || ^8.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
@@ -1259,7 +1280,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-04-06T17:09:23+00:00"
+            "time": "2019-04-17T08:51:36+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1372,6 +1393,51 @@
                 "serialize"
             ],
             "time": "2019-02-22T10:30:00+00:00"
+        },
+        {
+            "name": "overtrue/pinyin",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/pinyin.git",
+                "reference": "1350518c8211332de2f9c40d88b6e290b383bd31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/1350518c8211332de2f9c40d88b6e290b383bd31",
+                "reference": "1350518c8211332de2f9c40d88b6e290b383bd31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\Pinyin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos",
+                    "homepage": "http://github.com/overtrue"
+                }
+            ],
+            "description": "Chinese to pinyin translator.",
+            "homepage": "https://github.com/overtrue/pinyin",
+            "keywords": [
+                "Chinese",
+                "Pinyin",
+                "cn2pinyin"
+            ],
+            "time": "2019-01-11T12:52:09+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1737,6 +1803,66 @@
             "time": "2018-10-13T15:16:03+00:00"
         },
         {
+            "name": "rackbeat/laravel-ui-avatars",
+            "version": "0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rackbeat/laravel-ui-avatars.git",
+                "reference": "66497c8a6839d3a581675c0a643b945ec3c8ceab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rackbeat/laravel-ui-avatars/zipball/66497c8a6839d3a581675c0a643b945ec3c8ceab",
+                "reference": "66497c8a6839d3a581675c0a643b945ec3c8ceab",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.5|~5.6|~5.7|~5.8",
+                "lasserafn/php-initial-avatar-generator": "^3.0",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rackbeat\\UIAvatars\\UIAvatarsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rackbeat\\UIAvatars\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lasse Rafn",
+                    "email": "lasserafn@gmail.com"
+                },
+                {
+                    "name": "Rackbeat",
+                    "email": "open-source@rackbeat.com"
+                }
+            ],
+            "description": "Official Laravel wrapper around ui-avatars.com and LasseRafn/php-initial-avatar-generator",
+            "keywords": [
+                "Initials",
+                "avatars",
+                "laravel",
+                "php",
+                "ui-avatars"
+            ],
+            "time": "2019-04-06T10:31:48+00:00"
+        },
+        {
             "name": "ralouphie/getallheaders",
             "version": "2.0.5",
             "source": {
@@ -1922,16 +2048,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "24206aff3efe6962593297e57ef697ebb220e384"
+                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/24206aff3efe6962593297e57ef697ebb220e384",
-                "reference": "24206aff3efe6962593297e57ef697ebb220e384",
+                "url": "https://api.github.com/repos/symfony/console/zipball/e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
+                "reference": "e2840bb38bddad7a0feaf85931e38fdcffdb2f81",
                 "shasum": ""
             },
             "require": {
@@ -1990,7 +2116,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-01T07:32:59+00:00"
+            "time": "2019-04-08T14:23:48+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -2062,7 +2188,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -2115,16 +2241,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "43ce8ab34c734dcc8a4af576cb86711daab964c5"
+                "reference": "2d279b6bb1d582dd5740d4d3251ae8c18812ed37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/43ce8ab34c734dcc8a4af576cb86711daab964c5",
-                "reference": "43ce8ab34c734dcc8a4af576cb86711daab964c5",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/2d279b6bb1d582dd5740d4d3251ae8c18812ed37",
+                "reference": "2d279b6bb1d582dd5740d4d3251ae8c18812ed37",
                 "shasum": ""
             },
             "require": {
@@ -2167,20 +2293,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-10T17:09:50+00:00"
+            "time": "2019-04-11T11:27:41+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "ca5af306fbc37f3cf597e91bc9cfa0c7d3f33544"
+                "reference": "fbce53cd74ac509cbe74b6f227622650ab759b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/ca5af306fbc37f3cf597e91bc9cfa0c7d3f33544",
-                "reference": "ca5af306fbc37f3cf597e91bc9cfa0c7d3f33544",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/fbce53cd74ac509cbe74b6f227622650ab759b02",
+                "reference": "fbce53cd74ac509cbe74b6f227622650ab759b02",
                 "shasum": ""
             },
             "require": {
@@ -2231,20 +2357,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-30T15:58:42+00:00"
+            "time": "2019-04-06T13:51:08+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a"
+                "reference": "e45135658bd6c14b61850bf131c4f09a55133f69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/267b7002c1b70ea80db0833c3afe05f0fbde580a",
-                "reference": "267b7002c1b70ea80db0833c3afe05f0fbde580a",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/e45135658bd6c14b61850bf131c4f09a55133f69",
+                "reference": "e45135658bd6c14b61850bf131c4f09a55133f69",
                 "shasum": ""
             },
             "require": {
@@ -2280,20 +2406,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-23T15:42:05+00:00"
+            "time": "2019-04-06T13:51:08+00:00"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1"
+                "reference": "6ebbe61f48069033225c9d3fa7eb5ed116d766d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1",
-                "reference": "5b7ab6beaa5b053b8d3c9b13367ada9b292e12e1",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6ebbe61f48069033225c9d3fa7eb5ed116d766d6",
+                "reference": "6ebbe61f48069033225c9d3fa7eb5ed116d766d6",
                 "shasum": ""
             },
             "require": {
@@ -2334,20 +2460,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-30T15:58:42+00:00"
+            "time": "2019-04-17T14:56:00+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "e8b940bbeebf0f96789b5d17d9d77f8b2613960b"
+                "reference": "3db83303dbc1da9777e5ff63423b8b7fde423a1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/e8b940bbeebf0f96789b5d17d9d77f8b2613960b",
-                "reference": "e8b940bbeebf0f96789b5d17d9d77f8b2613960b",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3db83303dbc1da9777e5ff63423b8b7fde423a1b",
+                "reference": "3db83303dbc1da9777e5ff63423b8b7fde423a1b",
                 "shasum": ""
             },
             "require": {
@@ -2423,7 +2549,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-02T19:03:51+00:00"
+            "time": "2019-04-17T16:17:13+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2720,16 +2846,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "1e6cbb41dadcaf29e0db034d6ad0d039a9df06e6"
+                "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/1e6cbb41dadcaf29e0db034d6ad0d039a9df06e6",
-                "reference": "1e6cbb41dadcaf29e0db034d6ad0d039a9df06e6",
+                "url": "https://api.github.com/repos/symfony/process/zipball/8cf39fb4ccff793340c258ee7760fd40bfe745fe",
+                "reference": "8cf39fb4ccff793340c258ee7760fd40bfe745fe",
                 "shasum": ""
             },
             "require": {
@@ -2765,20 +2891,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-03-10T20:07:02+00:00"
+            "time": "2019-04-10T16:20:36+00:00"
         },
         {
             "name": "symfony/routing",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "319f600c1ea0f981f6bdc2f042cfc1690957c0e0"
+                "reference": "0e5719d216017b1a0342fa48e86467cedca1c954"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/319f600c1ea0f981f6bdc2f042cfc1690957c0e0",
-                "reference": "319f600c1ea0f981f6bdc2f042cfc1690957c0e0",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/0e5719d216017b1a0342fa48e86467cedca1c954",
+                "reference": "0e5719d216017b1a0342fa48e86467cedca1c954",
                 "shasum": ""
             },
             "require": {
@@ -2841,20 +2967,20 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-03-30T15:58:42+00:00"
+            "time": "2019-04-14T18:04:59+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "e46933cc31b68f51f7fc5470fb55550407520f56"
+                "reference": "46c0dede1f925383d13dc783857be2c41efd0b24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/e46933cc31b68f51f7fc5470fb55550407520f56",
-                "reference": "e46933cc31b68f51f7fc5470fb55550407520f56",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/46c0dede1f925383d13dc783857be2c41efd0b24",
+                "reference": "46c0dede1f925383d13dc783857be2c41efd0b24",
                 "shasum": ""
             },
             "require": {
@@ -2876,7 +3002,9 @@
                 "symfony/console": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/finder": "~2.8|~3.0|~4.0",
+                "symfony/http-kernel": "~3.4|~4.0",
                 "symfony/intl": "~3.4|~4.0",
+                "symfony/var-dumper": "~3.4|~4.0",
                 "symfony/yaml": "~3.4|~4.0"
             },
             "suggest": {
@@ -2914,20 +3042,20 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-01T14:13:08+00:00"
+            "time": "2019-04-10T16:20:36+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.2.5",
+            "version": "v4.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf"
+                "reference": "e760a38e12b15032325e64be63f7ffc1817af617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9f87189ac10b42edf7fb8edc846f1937c6d157cf",
-                "reference": "9f87189ac10b42edf7fb8edc846f1937c6d157cf",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e760a38e12b15032325e64be63f7ffc1817af617",
+                "reference": "e760a38e12b15032325e64be63f7ffc1817af617",
                 "shasum": ""
             },
             "require": {
@@ -2990,7 +3118,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-02-23T15:17:42+00:00"
+            "time": "2019-04-17T14:57:01+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

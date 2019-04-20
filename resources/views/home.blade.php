@@ -30,19 +30,21 @@
         @endauth
 
         <div class="col-lg-12">
+        @if (count($questions) > 0)
             @foreach ($questions as $question)
-            <a href="{{$question->slug}}">
-            <div class="card border-0">
-                <div class="media">
-                    <img src="{{ Avatar::create($question->user->name)->setDimension(50, 50) }}" />
+            <a href="question/{{$question->slug}}" class="carded">
+            <div class="card border-0 p-3">
+                <div class="media my-2">
+                    <img src="{{ $question->user->getUrlfriendlyAvatar() }}" />
                     <div class="media-body ml-2">
-                        <h1 class="mt-0">{{$question->title}}</h1>
+                        <div class="card-title"><h1 class="mt-0">{{$question->title}}</h1><h5>{{$question->user->name}} <small> <i>{{$question->created_at->diffForHumans()}}</i> </small></h5></div>
                         <p>{{$question->question}}</p>
                     </div>
                 </div>
             </div>
             </a>
             @endforeach
+        @endif
         </div>
     </div>
 </div>

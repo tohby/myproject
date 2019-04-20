@@ -2,12 +2,14 @@
 
 namespace App;
 
+use Rackbeat\UIAvatars\HasAvatar;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    use HasAvatar;
     use Notifiable;
 
     /**
@@ -50,5 +52,9 @@ class User extends Authenticatable
     public function question()
     {
         return $this->hasMany('App\Question');
+    }
+
+    public function getAvatar( $size = 64 ) {
+      return $this->getGravatar( $this->email, $size );
     }
 }

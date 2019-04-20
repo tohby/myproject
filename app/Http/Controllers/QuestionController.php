@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Question;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class QuestionController extends Controller
 {
@@ -17,7 +17,7 @@ class QuestionController extends Controller
     public function index()
     {
         //
-        $questions = Question::orderBy('created_at', 'asc')->simplePaginate(12);
+        $questions = Question::orderBy('created_at', 'desc')->simplePaginate(12);
         return view('home')->with('questions', $questions);
     }
 
@@ -65,8 +65,12 @@ class QuestionController extends Controller
     public function show(Question $question)
     {
         //
-        $question = Question::find($question);
+        $question = Question::find($question)->first();
         return view('questions/show', compact('question'));
+    }
+
+    public function myQuestions(){
+        
     }
 
     /**

@@ -48,3 +48,17 @@ $oswald: 'Oswald', sans-serif;
     }
   }
 }
+
+a.carded{
+  color: inherit;
+}
+
+a.carded:hover{
+  text-decoration: none;
+  // background-color: #F6F6F6;
+}
+
+.card:hover{
+  transition: 0.3s;
+  background-color: #f6f6f6;
+}

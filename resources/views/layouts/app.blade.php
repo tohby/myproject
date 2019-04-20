@@ -80,7 +80,15 @@
                         <ul class="nav flex-column sidebar sticky-top">
                             @auth
                             <li class="nav-item p-2">
-                                <a class="nav-link active" href="#">
+                                <a class="nav-link active" href="/">
+                                    <span class="icon">
+                                        <i class="fas fa-question-circle mr-2"></i> 
+                                    </span>
+                                    All Questions
+                                </a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="nav-link" href="#">
                                     <span class="icon">
                                         <i class="fas fa-question-circle mr-2"></i> 
                                     </span>
@@ -115,7 +123,7 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="container">
-                            @include('layouts/messages')
+    @include('layouts/messages')
                         </div>
                         @yield('content')
                     </div>
