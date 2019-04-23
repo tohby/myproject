@@ -39,9 +39,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getRouteKey()
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
     {
-        return $this->slug;
+        return 'slug';
     }
     
     public function profile()
@@ -49,9 +54,14 @@ class User extends Authenticatable
         return $this->hasOne('App\Profile');
     }
 
-    public function question()
+    public function questions()
     {
         return $this->hasMany('App\Question');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
     }
 
     public function getAvatar( $size = 64 ) {

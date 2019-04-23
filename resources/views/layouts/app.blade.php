@@ -78,17 +78,17 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <ul class="nav flex-column sidebar sticky-top">
+                            <li class="nav-item p-2">
+                                <a class="nav-link {{ request()->is('/') || request()->is('/questions') ? 'active' : '' }}" href="/">
+                                                                <span class="icon">
+                                                                    <i class="fas fa-question mr-2"></i>
+                                                                </span>
+                                                                All Questions
+                                                            </a>
+                            </li>
                             @auth
                             <li class="nav-item p-2">
-                                <a class="nav-link active" href="/">
-                                    <span class="icon">
-                                        <i class="fas fa-question-circle mr-2"></i> 
-                                    </span>
-                                    All Questions
-                                </a>
-                            </li>
-                            <li class="nav-item p-2">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('my-questions') ? 'active' : '' }}" href="/my-questions">
                                     <span class="icon">
                                         <i class="fas fa-question-circle mr-2"></i> 
                                     </span>
@@ -96,7 +96,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link " href="#">
                                     <span class="icon">
                                         <i class="fas fa-reply-all mr-2"></i>
                                     </span> My Participation
@@ -104,7 +104,7 @@
                             </li>
                             @endauth
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('unsolved') ? 'active' : '' }}" href="/unsolved">
                                     <span class="icon">
                                         <i class="fas fa-times-circle mr-2"></i> 
                                     </span>
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link {{ request()->is('solved') ? 'active' : '' }}" href="/solved">
                                     <span class="icon">
                                         <i class="fas fa-check-circle mr-2"></i> 
                                     </span>

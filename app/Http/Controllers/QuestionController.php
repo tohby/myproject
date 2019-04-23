@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -65,14 +66,32 @@ class QuestionController extends Controller
     public function show(Question $question)
     {
         //
-        $question = Question::find($question)->first();
+        $question = Question::find($question->id);
         return view('questions/show', compact('question'));
     }
 
     public function myQuestions(){
-        
+        // $questions = Question::orderBy('created_at', 'desc')->simplePaginate(12);
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
+        return view('questions/myquestions')->with('questions', $user->questions);
     }
 
+    public function unsolved(){
+        $questions = Question::whereNull('best-reply')
+               ->orderBy('created_at', 'desc')
+               ->take(10)
+               ->get();
+        return view('questions/unsolved')->with('questions', $questions);
+    }
+
+    public function solved(){
+        $questions = Question::whereNotNull('best-reply')
+               ->orderBy('created_at', 'desc')
+               ->take(10)
+               ->get();
+        return view('questions/unsolved')->with('questions', $questions);
+    }
     /**
      * Show the form for editing the specified resource.
      *

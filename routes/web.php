@@ -17,5 +17,8 @@
 
 Auth::routes();
 Route::get('/', 'QuestionController@index');
+Route::get('/my-questions', 'QuestionController@myQuestions');
+Route::get('/unsolved', 'QuestionController@unsolved');
+Route::get('/solved', 'QuestionController@solved');
 Route::get('/profile/{user}', 'ProfileController@show');
 Route::resource('/question', 'QuestionController');
