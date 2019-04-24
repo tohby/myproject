@@ -20,7 +20,7 @@ class CreateQuestionsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('title');
             $table->longText('question');
-            $table->integer('best-reply')->nullable();
+            $table->integer('best_reply')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

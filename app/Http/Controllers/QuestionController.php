@@ -54,7 +54,19 @@ class QuestionController extends Controller
             'question' => $request->input('question'),
             'user_id' => Auth::id()
         ]);
-        return redirect('question/'.$slug);
+        return redirect('question/'.$slug)->with('success', $success);
+    }
+
+    public function bestReply(Request $request, $id){
+        $this->validate($request, [
+            'bestReply' => 'required'
+        ]);
+        $bestReply = Question::find($id);
+
+        $bestReply->best_reply = $request->input('bestReply');
+
+        $flight->save();
+        return redirect('/');
     }
 
     /**
@@ -78,7 +90,7 @@ class QuestionController extends Controller
     }
 
     public function unsolved(){
-        $questions = Question::whereNull('best-reply')
+        $questions = Question::whereNull('best_reply')
                ->orderBy('created_at', 'desc')
                ->take(10)
                ->get();
@@ -86,7 +98,7 @@ class QuestionController extends Controller
     }
 
     public function solved(){
-        $questions = Question::whereNotNull('best-reply')
+        $questions = Question::whereNotNull('best_reply')
                ->orderBy('created_at', 'desc')
                ->take(10)
                ->get();
