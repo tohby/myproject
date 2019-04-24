@@ -54,19 +54,7 @@ class QuestionController extends Controller
             'question' => $request->input('question'),
             'user_id' => Auth::id()
         ]);
-        return redirect('question/'.$slug)->with('success', $success);
-    }
-
-    public function bestReply(Request $request, $id){
-        $this->validate($request, [
-            'bestReply' => 'required'
-        ]);
-        $bestReply = Question::find($id);
-
-        $bestReply->best_reply = $request->input('bestReply');
-
-        $flight->save();
-        return redirect('/');
+        return redirect('question/'.$slug);
     }
 
     /**

@@ -23,4 +23,4 @@ Route::get('/solved', 'QuestionController@solved');
 Route::get('/profile/{user}', 'ProfileController@show');
 Route::resource('/question', 'QuestionController');
 Route::resource('/comment', 'CommentController');
-Route::post('/best-reply', 'QuestionController@bestReply');
+Route::resource('/best-reply', 'BestReply');

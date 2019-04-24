@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Question extends Model
 {
     //
+    use Searchable;
     use SoftDeletes;
     /**
      * Get the route key for the model.
@@ -32,5 +34,10 @@ class Question extends Model
     public function comments()
     {
         return $this->hasMany('App\Comment');
+    }
+
+    public function searchableAs()
+    {
+        return 'question';
     }
 }

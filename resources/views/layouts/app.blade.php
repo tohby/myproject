@@ -95,13 +95,6 @@
                                     My Questions
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="#">
-                                    <span class="icon">
-                                        <i class="fas fa-reply-all mr-2"></i>
-                                    </span> My Participation
-                                </a>
-                            </li>
                             @endauth
                             <li class="nav-item">
                                 <a class="nav-link {{ request()->is('unsolved') ? 'active' : '' }}" href="/unsolved">

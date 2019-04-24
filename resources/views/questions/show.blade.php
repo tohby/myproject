@@ -20,7 +20,7 @@
             </div>
 
             <hr> @foreach ($question->comments as $comment)
-            <div class="card border-0 p-5">
+            <div class="card border-0 p-5 mb-2 {{$comment->id == $question->best_reply ? 'bg-success' : ''}}">
                 <div class="media my-2">
                     <img src="{{ $comment->user->getUrlfriendlyAvatar() }}" />
                     <div class="media-body ml-2">
@@ -32,14 +32,14 @@
                             </div>
                             @auth
                                 @if (Auth::user()->id == $question->user->id)
-                                <div class="col-lg-3">
-                                    <form action="{{action("QuestionController@bestReply", "$question->id")}}" method="POST">
-                                        @csrf
-                                        <input type="text" name="bestReply" value="{{$comment->id}}">
-                                        @method('PUT')
-                                        <button type="button" class="btn btn-outline-success">Best Answer</button>
-                                    </form>
-                                </div> 
+                                    @if ($question->best_reply == null)
+                                        <div class="col-lg-3">
+                                            <form action="{{action(" BestReply@update ", "$question->id")}}" method="POST" enctype="multipart/form-data"> @csrf
+                                                <input type="hidden" name="bestReply" id="bestReply" value="{{$comment->id}}"> @method('PUT')
+                                                <button type="submit" class="btn btn-outline-success">Best Answer</button>
+                                            </form>
+                                        </div>
+                                    @endif
                                 @endif
                             @endauth
                             
