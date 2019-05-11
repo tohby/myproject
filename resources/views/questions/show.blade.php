@@ -20,7 +20,7 @@
             </div>
 
             <hr> @foreach ($question->comments as $comment)
-            <div class="card border-0 p-5 mb-2 {{$comment->id == $question->best_reply ? 'bg-success' : ''}}">
+            <div class="card border-0 p-5 mb-2 {{$comment->id == $question->best_reply ? 'correct' : ''}}">
                 <div class="media my-2">
                     <img src="{{ $comment->user->getUrlfriendlyAvatar() }}" />
                     <div class="media-body ml-2">
@@ -34,7 +34,7 @@
                                 @if (Auth::user()->id == $question->user->id)
                                     @if ($question->best_reply == null)
                                         <div class="col-lg-3">
-                                            <form action="{{action(" BestReply@update ", "$question->id")}}" method="POST" enctype="multipart/form-data"> @csrf
+                                            <form action="{{action("BestReply@update", "$question->id")}}" method="POST" enctype="multipart/form-data"> @csrf
                                                 <input type="hidden" name="bestReply" id="bestReply" value="{{$comment->id}}"> @method('PUT')
                                                 <button type="submit" class="btn btn-outline-success">Best Answer</button>
                                             </form>
@@ -50,7 +50,8 @@
                     </div>
                 </div>
             </div>
-            @endforeach {{-- {{$question->comments}} --}} @auth
+            @endforeach {{-- {{$question->comments}} --}} 
+            @auth
             <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 <div class="card m-3 p-3">
                     <div class="my-2">
@@ -73,6 +74,9 @@
                 </div>
             </div>
             @endauth
+            @guest
+                Login to comment
+            @endguest
 
         </div>
     </div>

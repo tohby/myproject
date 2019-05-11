@@ -10,6 +10,9 @@ $oswald: 'Oswald', sans-serif;
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+.correct {
+  background-color: rgb(197, 219, 161);
+}
 .navbar-laravel {
   background-color: #ffffff;
   min-height: 70px;
