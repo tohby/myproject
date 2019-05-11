@@ -45,7 +45,7 @@ class CommentController extends Controller
             'question_id' => $request->input('questionId'),
             'comment' => $request->input('comment'),
         ]);
-        return "Comment submitted";
+        return back()->with('success', 'Your comment has been added to this question');
     }
 
     /**
@@ -68,6 +68,8 @@ class CommentController extends Controller
     public function edit(Comment $comment)
     {
         //
+        // $comment = Comment::find($comment->id);
+        // return view('questions/comment_edit')->with('comment', $comment);
     }
 
     /**
@@ -80,6 +82,13 @@ class CommentController extends Controller
     public function update(Request $request, Comment $comment)
     {
         //
+        $this->validate($request, [
+            'comment' => 'required',
+        ]);
+        $comment = Comment::find($comment->id);
+        $comment->comment = $request->comment;
+        $comment->save();
+        return back()->with('success', 'Your Comment has been updated');
     }
 
     /**
@@ -91,5 +100,8 @@ class CommentController extends Controller
     public function destroy(Comment $comment)
     {
         //
+        $comment = Comment::find($comment->id);
+        $comment->delete();
+        return back()->with('success', 'Comment deleted');
     }
 }

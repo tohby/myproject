@@ -17,6 +17,8 @@ class Question extends Model
      *
      * @return string
      */
+
+
     public function getRouteKeyName()
     {
         return 'slug';

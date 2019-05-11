@@ -113,8 +113,29 @@ class QuestionController extends Controller
     public function update(Request $request, Question $question)
     {
         //
+        $this->validate($request, [
+            'title' => 'required',
+            'question' => 'required',
+        ]);
+        $question = Question::find($question->id);
+        $question->title = $request->title;
+        $question->question = $request->question;
+        $question->save();
+        return redirect('/question/'.$question->slug)->with('success', 'Your Question has been updated');
     }
 
+    public function trash(){
+        $user = Auth::user()->id;
+        $questions = Question::onlyTrashed()->where('user_id', $user)->simplePaginate(12);
+        return view('questions/trash', compact('questions'));
+    }
+
+    public function restore(Question $question){
+        $question= Question::withTrashed()->find($question->id);
+        $question->restore();   
+        return back()->with('succes', 'Your question has been restored and can now be viewed publicly');
+        // return $question;
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -124,5 +145,8 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         //
+        $question = Question::find($question->id);
+        $question->delete();
+        return redirect('/question')->with('success', 'Your question has been deleted');
     }
 }

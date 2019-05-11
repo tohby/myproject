@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/algolia/algoliasearch-client-php.git",
-                "reference": "7423057ca904f676307eddf300e08a26e2d194e0"
+                "reference": "f921b366357a24f7e5596c0250c19191542acb01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/7423057ca904f676307eddf300e08a26e2d194e0",
-                "reference": "7423057ca904f676307eddf300e08a26e2d194e0",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/f921b366357a24f7e5596c0250c19191542acb01",
+                "reference": "f921b366357a24f7e5596c0250c19191542acb01",
                 "shasum": ""
             },
             "require": {
@@ -30,6 +30,8 @@
                 "psr/simple-cache": "^1.0"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "fzaninotto/faker": "^1.8",
                 "phpunit/phpunit": "^4.8",
                 "symfony/yaml": "^2.0 || ^4.0"
             },
@@ -72,7 +74,7 @@
                 "php",
                 "search"
             ],
-            "time": "2019-02-26T15:58:17+00:00"
+            "time": "2019-05-07T13:34:37+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1044,16 +1046,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "50f542149754dc48580abf4b2f419333426b809a"
+                "reference": "a643d5d5fd8d1598baa1e4fe4251931b0de58923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/50f542149754dc48580abf4b2f419333426b809a",
-                "reference": "50f542149754dc48580abf4b2f419333426b809a",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/a643d5d5fd8d1598baa1e4fe4251931b0de58923",
+                "reference": "a643d5d5fd8d1598baa1e4fe4251931b0de58923",
                 "shasum": ""
             },
             "require": {
@@ -1105,7 +1107,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2019-04-02T16:58:18+00:00"
+            "time": "2019-04-30T15:43:48+00:00"
         },
         {
             "name": "laravel/telescope",
